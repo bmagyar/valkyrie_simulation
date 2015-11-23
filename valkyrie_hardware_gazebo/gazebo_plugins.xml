@@ -1,0 +1,11 @@
+<library path="lib/libvalkyrie_hardware_gazebo">
+
+  <class
+    name="valkyrie_hardware_gazebo/ValkyrieHardwareGazebo"
+    type="valkyrie_hardware_gazebo::ValkyrieHardwareGazebo"
+    base_class_type="gazebo_ros_control::RobotHWSim">
+    <description>
+      Valkyrie robot simulation interface.
+    </description>
+  </class>
+</library>

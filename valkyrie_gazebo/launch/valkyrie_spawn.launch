@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <arg name="robot"  default="A_sim"/>
+  <arg name="gzpose"/>
+
+  <!-- PID gains -->
+  <!--rosparam command="load" file="$(find valkyrie_controller_configuration_gazebo)/config/pids.yaml"/-->
+
+  <!-- Robot model -->
+  <include file="$(find valkyrie_bringup)/launch/upload_model.launch">
+    <param name="robot" value="$(arg robot)"/>
+  </include>
+
+  <!-- Spawn robot in Gazebo -->
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_model"
+    args="-urdf -param robot_description $(arg gzpose) -model valkyrie" />
+
+</launch>

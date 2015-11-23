@@ -1,0 +1,7 @@
+<launch>
+    <arg name="robot" default="A_sim" />
+    <!-- Xacro, y u so slow? -->
+    <!--param name="robot_description" command="$(find xacro)/xacro.py '$(find val_description)/model/robots/valkyrie_$(arg robot).xacro'" /-->
+    
+    <param name="robot_description" textfile="$(find val_description)/model/urdf/valkyrie_$(arg robot).urdf"/>
+</launch>

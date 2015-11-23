@@ -1,0 +1,14 @@
+<launch>
+  <rosparam command="load" file="$(find valkyrie_controller_configuration_gazebo)/config/effort_controllers.yaml" />
+
+  <!-- Controllers that come up started -->
+  <node name="effort_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="--timeout 120
+              torso_controller
+              head_controller
+              left_arm_controller
+              right_arm_controller
+              left_leg_controller
+              right_leg_controller" />
+</launch>

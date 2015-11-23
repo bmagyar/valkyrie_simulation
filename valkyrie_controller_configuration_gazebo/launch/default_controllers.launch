@@ -1,0 +1,11 @@
+<launch>
+  <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />
+
+  <!-- Controllers that come up started -->
+  <node name="default_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="--timeout 120
+              joint_state_controller" />
+
+  <include file="$(find valkyrie_controller_configuration_gazebo)/launch/effort_controllers.launch" />
+</launch>

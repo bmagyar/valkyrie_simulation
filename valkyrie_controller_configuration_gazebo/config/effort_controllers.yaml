@@ -1,0 +1,54 @@
+left_leg_controller:
+    type: effort_controllers/JointGroupEffortController
+    joints:
+        - leftHipYaw
+        - leftHipRoll
+        - leftHipPitch
+        - leftKneePitch
+        - leftAnklePitch
+
+right_leg_controller:
+    type: effort_controllers/JointGroupEffortController
+    joints:
+        - rightHipYaw
+        - rightHipRoll
+        - rightHipPitch
+        - rightKneePitch
+        - rightAnklePitch
+
+left_arm_controller:
+    type: effort_controllers/JointGroupEffortController
+    joints:
+        - leftShoulderPitch
+        - leftShoulderRoll
+        - leftShoulderYaw
+        - leftElbowPitch
+        - leftForearmYaw
+        - leftWristRoll
+        - leftWristPitch
+
+right_arm_controller:
+    type: effort_controllers/JointGroupEffortController
+    joints:
+        - rightShoulderPitch
+        - rightShoulderRoll
+        - rightShoulderYaw
+        - rightElbowPitch
+        - rightForearmYaw
+        - rightWristRoll
+        - rightWristPitch
+
+head_controller:
+    type: effort_controllers/JointGroupEffortController
+    joints:
+        - lowerNeckPitch
+        - neckYaw
+        - upperNeckPitch
+
+torso_controller:
+    type: effort_controllers/JointGroupEffortController
+    joints:
+        - torsoYaw
+        - torsoPitch
+        - torsoRoll
+
